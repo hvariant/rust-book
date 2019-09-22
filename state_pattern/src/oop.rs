@@ -12,7 +12,8 @@ impl Post {
     }
 
     pub fn add_text(&mut self, text: &str) {
-        self.content.push_str(self.state.as_ref().unwrap().add_text(text));
+        self.content
+            .push_str(self.state.as_ref().unwrap().add_text(text));
     }
 
     pub fn content(&self) -> &str {
